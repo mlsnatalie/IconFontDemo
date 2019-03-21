@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="67dp">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_comments"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="#12141f"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/tv_broadcast"
+                android:layout_width="43dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:text="直播中"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:textColor="@color/camera_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+                android:id="@+id/dot_time"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/camera_bg_dot_white"
+                android:layout_marginStart="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_broadcast"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/controller_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/camera_controller_bg"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_comments">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/view_close"
+                android:layout_width="wrap_content"
+                style="@style/LiveControllerTextWrap"
+                android:paddingLeft="14dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.iconfontdemo.IconFontView
+                    style="@style/LiveControllerIcon"
+                    android:text="&#xe641;"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <TextView
+                    style="@style/LiveControllerText"
+                    android:text="收起"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/view_picture"
+                style="@style/LiveControllerTextWrap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/view_close"
+                app:layout_constraintRight_toLeftOf="@id/view_camera"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.iconfontdemo.IconFontView
+                    style="@style/LiveControllerIcon"
+                    android:text="&#xe640;"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <TextView
+                    style="@style/LiveControllerText"
+                    android:text="图片"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/view_camera"
+                style="@style/LiveControllerTextWrap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_picture"
+                app:layout_constraintRight_toLeftOf="@id/view_brush"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.iconfontdemo.IconFontView
+                    style="@style/LiveControllerIcon"
+                    android:text="&#xe63f;"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <TextView
+                    style="@style/LiveControllerText"
+                    android:text="相机"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/view_brush"
+                style="@style/LiveControllerTextWrap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_camera"
+                app:layout_constraintRight_toLeftOf="@id/iv_play"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.iconfontdemo.IconFontView
+                    style="@style/LiveControllerIcon"
+                    android:text="&#xe639;"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <TextView
+                    style="@style/LiveControllerText"
+                    android:text="画笔"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/iv_play"
+                style="@style/LiveControllerTextPlayStopWrap"
+                android:background="@color/color_6471FB"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.iconfontdemo.IconFontView
+                    android:id="@+id/iv_play_icon"
+                    style="@style/LiveControllerIconPlayStop"
+                    android:text="@string/icon_play_start"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <TextView
+                    android:id="@+id/iv_play_text"
+                    style="@style/LiveControllerTextPlayStop"
+                    android:text="开始直播"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!--<com.spero.scarlet.camera.support.widget.IconFontView-->
+        <!--android:id="@+id/iv_play"-->
+        <!--android:layout_width="27dp"-->
+        <!--android:layout_height="27dp"-->
+        <!--android:layout_marginEnd="36dp"-->
+        <!--android:background="@drawable/bg_btn_start"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/icon_play_start"-->
+        <!--android:textColor="@color/color_f2f2f2"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"/>-->
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
